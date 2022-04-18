@@ -19,8 +19,8 @@ public class KafkaProducerController {
     }
 
     @PostMapping(value = "/publish")
-    public void publishMessage(@RequestParam("message") String message) {
-        this.kafkaTemplate.send("trafficCount", message);
+    public void publishMessage(@RequestParam("count") String count) {
+        this.kafkaTemplate.send("trafficCount", count);
     }
 
 }
