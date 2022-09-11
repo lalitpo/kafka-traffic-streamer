@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,9 +27,9 @@ public class KafkaProducerController {
 
             
         } catch (Exception e) {
-            return new ResponseEntity<String>("Exception in Kafka", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>("Exception in Kafka", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<String>("Successfull in Kafka", HttpStatus.OK);
+        return new ResponseEntity<>("Successfull in Kafka", HttpStatus.OK);
 
     }
 
